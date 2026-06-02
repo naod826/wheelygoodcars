@@ -1,22 +1,111 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
-// Variables
-$primary:	hsl(28, 100%, 50%);
-$secondary:	hsl(28, 100%, 45%);
-$light:		hsl(30, 23%, 95%);
-$dark:      hsl(28, 10%, 14%);
-$gray:		hsl(28, 10%, 97%);
-
-// Bootstrap
+$primary: hsl(28, 100%, 50%);
 @import 'bootstrap/scss/bootstrap';
 
-// Typography
 $font-family-sans-serif: 'Open Sans', sans-serif;
 
-.fullheight{
-    min-height: calc(100vh - 56px) !important;
+body {
+    background-color: #f8f9fa;
+}
+
+.fullheight {
+    min-height: calc(100vh - 56px);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
+}
+
+.plate-group { border-radius: 0.6rem; overflow: hidden; }
+.plate-prefix { background: #2f55b6; color: #fff; border: 0; padding: 0 1.25rem; }
+.plate-input {
+    background: #f5ea3b;
+    border: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+.plate-input:focus { background: #f5ea3b; box-shadow: none; }
+.plate-go { background: #a66a2b; color: #fff; border: 0; padding: 0 1.5rem; }
+.plate-go:hover { background: #925a23; color: #fff; }
+
+.progress-steps {
+    border-radius: 1rem;
+    background-color: #e9ecef;
+}
+
+.car-card {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.car-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.car-card-featured {
+    border: 2px solid $primary;
+    box-shadow: 0 0.5rem 1.25rem rgba($primary, 0.2);
+    transform: scale(1.03);
+}
+
+#viewsToast {
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.my-cars-table {
+    font-size: 0.9rem;
+
+    thead th {
+        font-weight: 600;
+        white-space: nowrap;
+        border-bottom-width: 1px;
+    }
+
+    tbody td {
+        vertical-align: middle;
+    }
+}
+
+.my-car-price-input {
+    width: 7.5rem;
+    min-width: 7.5rem;
+
+    .form-control {
+        min-width: 4.5rem;
+    }
+}
+
+.my-car-tags-cell {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 16rem;
+}
+
+.my-car-tags-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.my-car-tags-menu {
+    min-width: 11rem;
+    max-height: 14rem;
+    overflow-y: auto;
+
+    .dropdown-item.active {
+        background-color: $primary;
+        color: #212529;
+    }
+}
+
+.my-car-actions {
+    min-width: 11rem;
 }
